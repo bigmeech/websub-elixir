@@ -22,6 +22,7 @@ defmodule Websub.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      {:cowboy, "~> 1.0.3"},
       {:mongodb, ">= 0.0.0"},
       {:poolboy, ">= 0.0.0"}
       # {:dep_from_hexpm, "~> 0.3.0"},
