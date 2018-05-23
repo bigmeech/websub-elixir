@@ -1,34 +1,12 @@
 defmodule Websub do
-  @moduledoc """
-  Documentation for Websub.
-  """
-
-  @doc """
-  Hello world.
-
-  ## Examples
-
-      iex> Websub.hello
-      :world
-
-  """
-  def hello do
-    :world
+  def init(default_options) do
+    IO.puts "Initing plug..."
+    default_options
   end
 
-  def add(a, b) do
-    a + b
-  end
-
-  def concat(a, b) do
-    a ++ b
-  end
-
-  def getHead(list) do
-    hd(list)
-  end
-
-  def getTail(list) do
-    tl(list)
-  end
+  def call(conn, options) do
+    IO.puts "Calling plug..."
+    conn
+      |> Plug.Conn.send_resp(200, "Welcome to pub sub");
+  end 
 end
