@@ -14,7 +14,7 @@ defmodule Websub.MixProject do
   # Run "mix help compile.app" to learn about applications.
   def application do
     [
-      applications: [:mongodb, :poolboy, :cowboy, :plug],
+      applications: [:mongodb, :poolboy, :cowboy, :plug, :poison],
       extra_applications: [:logger]
     ]
   end
@@ -24,6 +24,7 @@ defmodule Websub.MixProject do
     [
       {:cowboy, "~> 1.0.3"},
       {:plug, "~> 1.0" },
+      {:poison, "~> 3.1"},
       {:mongodb, ">= 0.0.0"},
       {:poolboy, ">= 0.0.0"}
       # {:dep_from_hexpm, "~> 0.3.0"},

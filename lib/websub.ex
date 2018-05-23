@@ -7,6 +7,6 @@ defmodule Websub do
   def call(conn, options) do
     IO.puts "Calling plug..."
     conn
-      |> Plug.Conn.send_resp(200, "Welcome to pub sub");
+      |> Plug.Conn.send_resp(conn, 200, "Welcome to pub sub");
   end 
 end
